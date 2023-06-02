@@ -6,6 +6,18 @@
   --slate: #434455;
   --ocean: #404bbf;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 span,
 p,
 h1,
@@ -47,15 +59,19 @@ body {
 }
 .container {
   width: 100%;
-  max-width: 1128px;
+  max-width: 1158px;
   margin: 0 auto;
   /* outline: 2px solid red; */
 }
 /** ------------------HEADER------------------ */
+.header {
+  border-bottom: 1px solid #e7e9fc;
+}
 .header-container {
   display: flex;
   align-items: center;
-  padding: 14px 0;
+  padding: 0 15px;
+  padding: 24px 0;
 }
 .header-nav {
   display: flex;
@@ -63,6 +79,7 @@ body {
   gap: 76px;
 }
 .header-list {
+  /* padding: 24px 0; */
   display: flex;
   align-items: center;
   gap: 40px;
@@ -114,7 +131,6 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 48px;
-  padding: 188px 316px 292px 316px;
 }
 .page-title {
   font-weight: 700;
@@ -137,6 +153,9 @@ body {
   cursor: pointer;
   padding: 16px 42px;
   border-radius: 4px;
+  min-width: 169px;
+  height: 56px;
+  border: none;
 }
 .button-order-service:hover,
 .button-order-service:focus {
@@ -144,10 +163,13 @@ body {
 }
 .main-section {
   background-color: var(--navy);
+  padding: 188px 0;
+}
+.features {
+  padding: 120px 0;
 }
 .features-container {
   display: flex;
-  padding: 120px 0;
   gap: 24px;
 }
 .features-items {
@@ -164,6 +186,7 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--navy);
+  margin-bottom: 8px;
 }
 .features-text {
   font-weight: 400;
@@ -174,9 +197,11 @@ body {
 }
 
 .doing-container {
+  padding-bottom: 120px;
+}
+.doing-list {
   display: flex;
   gap: 24px;
-  padding-bottom: 120px;
 }
 .doing-items {
   width: calc((100% - 48px) / 3);
@@ -191,9 +216,6 @@ body {
   color: var(--navy);
   margin-bottom: 72px;
 }
-.team-section {
-  background-color: var(--cloud);
-}
 .team-item {
   background-color: var(--white);
   width: calc((100% -72px) / 4);
@@ -202,9 +224,12 @@ body {
   align-items: center;
 }
 .team-container {
+  padding-bottom: 120px;
+  background-color: var(--cloud);
+}
+.team-list {
   display: flex;
   gap: 24px;
-  padding-bottom: 120px;
 }
 .team-title {
   font-weight: 500;
@@ -275,6 +300,7 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 16px;
+  display: inline-block;
 }
 .footer-container {
   padding: 100px 0;
