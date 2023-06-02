@@ -253,7 +253,10 @@ body {
   text-align: center;
 }
 /** ------------------PORTFOLIO.HTML------------------ */
-.portfolio-filters {
+.filter {
+  padding: 96px 0 120px 0;
+}
+.portfolio-filter {
   display: flex;
   gap: 24px;
   justify-content: center;
