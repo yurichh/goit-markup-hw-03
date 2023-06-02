@@ -6,6 +6,33 @@
   --slate: #434455;
   --ocean: #404bbf;
 }
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
 body {
   background-color: var(--white);
   font-family: Roboto, sans-serif;
@@ -18,11 +45,29 @@ body {
 .list {
   list-style: none;
 }
-
+.container {
+  width: 100%;
+  max-width: 1128px;
+  margin: 0 auto;
+  /* outline: 2px solid red; */
+}
 /** ------------------HEADER------------------ */
-
-.header-title,
-.footer-title {
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 14px 0;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 76px;
+}
+.header-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.header-title {
   font-family: Raleway, sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -30,7 +75,9 @@ body {
   color: var(--iris);
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-right: 76px;
 }
+
 .header-span {
   color: var(--navy);
 }
@@ -56,10 +103,19 @@ body {
 }
 .header-address {
   font-style: normal;
+  display: flex;
+  gap: 40px;
+  margin-left: auto;
 }
 
 /** ------------------INDEX.HTML------------------ */
-
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding: 188px 316px 292px 316px;
+}
 .page-title {
   font-weight: 700;
   font-size: 56px;
@@ -68,6 +124,7 @@ body {
   font-style: normal;
   letter-spacing: 0.02em;
   line-height: 1.07;
+  max-width: 496px;
 }
 .button-order-service {
   font-size: 16px;
@@ -78,6 +135,8 @@ body {
   background-color: var(--iris);
   color: var(--white);
   cursor: pointer;
+  padding: 16px 42px;
+  border-radius: 4px;
 }
 .button-order-service:hover,
 .button-order-service:focus {
@@ -86,21 +145,41 @@ body {
 .main-section {
   background-color: var(--navy);
 }
-.features-title,
-.team-title {
+.features-container {
+  display: flex;
+  padding: 120px 0;
+  gap: 24px;
+}
+.features-items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  width: calc((100% - 72px) / 4);
+}
+.features-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--navy);
 }
-.features-text,
-.team-text {
+.features-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--slate);
+}
+
+.doing-container {
+  display: flex;
+  gap: 24px;
+  padding-bottom: 120px;
+}
+.doing-items {
+  width: calc((100% - 48px) / 3);
 }
 .section-title {
   font-weight: 700;
@@ -110,14 +189,40 @@ body {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--navy);
+  margin-bottom: 72px;
 }
 .team-section {
   background-color: var(--cloud);
 }
 .team-item {
   background-color: var(--white);
+  width: calc((100% -72px) / 4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
+.team-container {
+  display: flex;
+  gap: 24px;
+  padding-bottom: 120px;
+}
+.team-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--navy);
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+.team-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--slate);
+  padding-bottom: 32px;
+}
 /** ------------------PORTFOLIO.HTML------------------ */
 
 .portfolio-title {
@@ -150,7 +255,7 @@ body {
 
 /** ------------------FOOTER------------------ */
 
-.footer-container {
+.footer {
   background-color: var(--navy);
 }
 .footer-span {
@@ -159,4 +264,18 @@ body {
 .copyright {
   color: var(--cloud);
   letter-spacing: 0.02em;
+  max-width: 264px;
+}
+.footer-title {
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  color: var(--iris);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.footer-container {
+  padding: 100px 0;
 }
