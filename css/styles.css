@@ -79,7 +79,6 @@ body {
   gap: 76px;
 }
 .header-list {
-  padding: 24px 0;
   display: flex;
   align-items: center;
   gap: 40px;
@@ -93,6 +92,7 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-right: 76px;
+  padding: 24px 0;
 }
 
 .header-span {
@@ -224,7 +224,6 @@ body {
   background-color: var(--white);
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 32px 16px;
 }
 .team-container {
@@ -242,6 +241,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--navy);
   margin-bottom: 8px;
+  text-align: center;
 }
 .team-text {
   font-weight: 400;
@@ -249,6 +249,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--slate);
+  text-align: center;
 }
 /** ------------------PORTFOLIO.HTML------------------ */
 
@@ -284,6 +285,7 @@ body {
 
 .footer {
   background-color: var(--navy);
+  padding: 100px 0;
 }
 .footer-span {
   color: var(--cloud);
@@ -303,7 +305,4 @@ body {
   text-transform: uppercase;
   margin-bottom: 16px;
   display: inline-block;
-}
-.footer-container {
-  padding: 100px 0;
 }
