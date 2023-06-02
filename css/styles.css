@@ -253,7 +253,22 @@ body {
   text-align: center;
 }
 /** ------------------PORTFOLIO.HTML------------------ */
-
+.portfolio-filters {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  padding-top: 96px;
+  margin-bottom: 72px;
+}
+.filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+  padding-bottom: 120px;
+}
+.filter-items {
+  width: calc((100% - 48px) / 3);
+}
 .portfolio-title {
   font-family: "Roboto";
   font-style: normal;
@@ -275,6 +290,8 @@ body {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--iris);
+  padding: 12px 24px;
+  border: 4px;
 }
 .portfolio-button:hover,
 .portfolio-button:focus {
